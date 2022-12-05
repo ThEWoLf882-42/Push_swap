@@ -1,35 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   inita.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/05 13:54:38 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/05 13:44:30 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/05 13:54:26 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+t_stacks	*inita(t_stacks *a, int argc, char **argv)
 {
-	t_stacks	*a;
-	t_stacks	*b;
+	int	i;
 
-	if (argc > 1)
-	{
-		a = inita(a, argc, argv);
-		while (a)
-		{
-			printf("a = %d\n", a->content);
-			a = a->next;
-		}
-		printf("\n");
-		while (b)
-		{
-			printf("b = %d\n", b->content);
-			b = b->next;
-		}
-	}
+	i = 0;
+	while (++i < argc)
+		ft_lstadd_back(&a, ft_lstnew(ft_atoi(argv[i])));
+	return (a);
 }

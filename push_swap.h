@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:29 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 19:56:13 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/05 13:53:36 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,16 +15,17 @@
 
 # include "./libft/libft.h"
 
-void	sa(t_stacks **a);
-void	sb(t_stacks **b);
-void	ss(t_stacks **a, t_stacks **b);
-void	pa(t_stacks **a, t_stacks **b);
-void	pb(t_stacks **a, t_stacks **b);
-void	ra(t_stacks **a);
-void	rb(t_stacks **b);
-void	rr(t_stacks **a, t_stacks **b);
-void	rra(t_stacks **a);
-void	rrb(t_stacks **b);
-void	rrr(t_stacks **a, t_stacks **b);
+void		sa(t_stacks **a);
+void		sb(t_stacks **b);
+void		ss(t_stacks **a, t_stacks **b);
+void		pa(t_stacks **a, t_stacks **b);
+void		pb(t_stacks **a, t_stacks **b);
+void		ra(t_stacks **a);
+void		rb(t_stacks **b);
+void		rr(t_stacks **a, t_stacks **b);
+void		rra(t_stacks **a);
+void		rrb(t_stacks **b);
+void		rrr(t_stacks **a, t_stacks **b);
+t_stacks	*inita(t_stacks *a, int argc, char **argv);
 
 #endif
