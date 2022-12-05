@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/05 14:35:07 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/05 14:51:02 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,9 @@ int	main(int argc, char **argv)
 	if (argc > 1)
 	{
 		a = inita(a, argc, argv);
+		if (a == NULL)
+			return (0);
+		pa(&a, &b);
 		while (a)
 		{
 			printf("a = %d\n", a->content);
