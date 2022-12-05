@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/05 14:45:51 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/05 17:02:01 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void		ft_settnext(t_stacks **s);
 void		ft_setnext(t_stacks **s);
 void		ft_cleartnext(t_stacks **s);
 void		ft_setrr(t_stacks **s);
+int			ft_digit(char *s);
 // void		ft_setnull(int *d);
 // void		ft_lstclear(t_stacks **s, void (*del)(int *));
 

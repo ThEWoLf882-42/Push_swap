@@ -1,31 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   inita.c                                            :+:      :+:    :+:   */
+/*   ft_digit.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 13:44:30 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/05 17:20:23 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/05 16:59:24 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/05 17:24:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-t_stacks	*inita(t_stacks *a, int argc, char **argv)
+int	ft_digit(char *s)
 {
 	int	i;
 
 	i = 0;
-	while (++i < argc)
+	while (s[i])
 	{
-		if (!(ft_digit(argv[i])))
-		{
-			write(1, "Error\n", 6);
-			return (NULL);
-		}
-		else
-			ft_lstadd_back(&a, ft_lstnew(ft_atoi(argv[i])));
+		if (!((s[i] >= '0' && s[i] <= '9') || s[i] == '-' || s[i] == '+'))
+			return (0);
+		i++;
 	}
-	return (a);
+	return (1);
 }
