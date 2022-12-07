@@ -6,13 +6,13 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:24:23 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 14:33:53 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/07 14:28:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+long long	ft_atoi(const char *str)
 {
 	size_t	i;
 	size_t	y;
