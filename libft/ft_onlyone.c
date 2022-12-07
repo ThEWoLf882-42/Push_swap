@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_onlyone.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/06 20:16:04 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/07 13:34:25 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/07 14:03:15 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+int	ft_onlyone(int argc, char **argv)
 {
-	t_stacks	*a;
-	t_stacks	*b;
+	int	i;
+	int	j;
 
-	if (argc > 1)
+	i = 1;
+	while (i < argc - 1)
 	{
-		a = inita(a, argc, argv);
-		if (a == NULL)
-			return (0);
-		while (a)
+		j = i + 1;
+		while (j < argc)
 		{
-			printf("a = %d\n", a->content);
-			a = a->next;
+			if (ft_strcmp(argv[i], argv[j]) == 0)
+				return (1);
+			j++;
 		}
-		printf("\n");
-		while (b)
-		{
-			printf("b = %d\n", b->content);
-			b = b->next;
-		}
+		i++;
 	}
+	return (0);
 }

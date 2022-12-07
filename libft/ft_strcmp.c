@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/06 20:16:04 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/07 14:03:54 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/07 14:03:55 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-int	main(int argc, char **argv)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	t_stacks	*a;
-	t_stacks	*b;
+	unsigned int	a;
 
-	if (argc > 1)
+	a = 0;
+	while ((s1[a] != '\0' || s2[a] != '\0'))
 	{
-		a = inita(a, argc, argv);
-		if (a == NULL)
-			return (0);
-		while (a)
-		{
-			printf("a = %d\n", a->content);
-			a = a->next;
-		}
-		printf("\n");
-		while (b)
-		{
-			printf("b = %d\n", b->content);
-			b = b->next;
-		}
+		if (s1[a] != s2[a])
+			return ((unsigned char)s1[a] - (unsigned char)s2[a]);
+		a++;
 	}
+	return (0);
 }
