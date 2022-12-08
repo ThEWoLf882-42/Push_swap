@@ -25,6 +25,7 @@ SOURCES_LIST =	inita.c \
 				rrr.c \
 				sa.c \
 				sb.c \
+				sort.c \
 				ss.c \
 
 SOURCES_LIST_PS = push_swap.c

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 13:42:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/08 14:40:46 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/03 19:35:56 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/08 19:50:23 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@
 
 void	pb(t_stacks **a, t_stacks **b)
 {
-	ft_lstadd_back(a, ft_lstnew((*b)->content));
-	(*b) = (*b)->next;
-	ft_settnext(a);
-	ft_setnext(a);
-	ft_cleartnext(a);
+	if (ft_lstsize((*a)) > 0)
+	{
+		ft_lstadd_front(b, ft_lstnew((*a)->content));
+		(*a) = (*a)->next;
+		ft_settnext(b);
+		ft_setnext(b);
+		ft_cleartnext(b);
+	}
 }
