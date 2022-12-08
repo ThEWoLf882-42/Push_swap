@@ -1,24 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pb.c                                               :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 13:42:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 14:51:25 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/03 17:24:23 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/08 15:17:23 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	pb(t_stacks **a, t_stacks **b)
+long long	ft_atoi(const char *str)
 {
-	int	j;
+	size_t	i;
+	size_t	y;
+	size_t	sign;
 
-	ft_lstadd_back(a, ft_lstnew((*b)->content));
-	(*b) = (*b)->next;
-	ft_settnext(a);
-	ft_setnext(a);
-	ft_cleartnext(a);
+	i = 0;
+	y = 0;
+	sign = 1;
+	while (ft_isspace(str[y]))
+		y++;
+	if (str == 0)
+		return (0);
+	if (str[y] == '-' || str[y] == '+')
+	{
+		if (str[y] == '-')
+			sign = -1;
+		y++;
+	}
+	while (str[y] && str[y] >= '0' && str[y] <= '9')
+	{
+		i = i * 10 + str[y] - '0';
+		y++;
+	}
+	return (i * sign);
 }

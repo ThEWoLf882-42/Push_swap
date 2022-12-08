@@ -1,40 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 17:24:23 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/07 14:28:33 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/08 15:43:03 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-long long	ft_atoi(const char *str)
+int	main(int argc, char **argv)
 {
-	size_t	i;
-	size_t	y;
-	size_t	sign;
+	t_stacks	*a;
+	t_stacks	*b;
 
-	i = 0;
-	y = 0;
-	sign = 1;
-	while (ft_isspace(str[y]))
-		y++;
-	if (str == 0)
-		return (0);
-	if (str[y] == '-' || str[y] == '+')
+	a = NULL;
+	b = NULL;
+	if (argc > 1)
 	{
-		if (str[y] == '-')
-			sign = -1;
-		y++;
+		a = inita(a, argc, argv);
+		if (a == NULL)
+			return (0);
+		while (a)
+		{
+			printf("a = %d\n", a->content);
+			a = a->next;
+		}
+		printf("\n");
+		while (b)
+		{
+			printf("b = %d\n", b->content);
+			b = b->next;
+		}
 	}
-	while (str[y] && str[y] >= '0' && str[y] <= '9')
-	{
-		i = i * 10 + str[y] - '0';
-		y++;
-	}
-	return (i * sign);
 }

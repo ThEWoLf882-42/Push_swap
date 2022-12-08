@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   pb.c                                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/07 14:22:12 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/04 13:42:55 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/08 14:40:46 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+void	pb(t_stacks **a, t_stacks **b)
 {
-	t_stacks	*a;
-	t_stacks	*b;
-
-	if (argc > 1)
-	{
-		a = inita(a, argc, argv);
-		if (a == NULL)
-			return (0);
-		while (a)
-		{
-			printf("a = %d\n", a->content);
-			a = a->next;
-		}
-		printf("\n");
-		while (b)
-		{
-			printf("b = %d\n", b->content);
-			b = b->next;
-		}
-	}
+	ft_lstadd_back(a, ft_lstnew((*b)->content));
+	(*b) = (*b)->next;
+	ft_settnext(a);
+	ft_setnext(a);
+	ft_cleartnext(a);
 }

@@ -1,24 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   ft_isspace.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 19:35:56 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 14:51:32 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/03 17:24:40 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/08 15:17:30 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "libft.h"
 
-void	pa(t_stacks **a, t_stacks **b)
+int	ft_isspace(size_t c)
 {
-	int	j;
-
-	ft_lstadd_back(b, ft_lstnew((*a)->content));
-	(*a) = (*a)->next;
-	ft_settnext(b);
-	ft_setnext(b);
-	ft_cleartnext(b);
+	if ((c == ' ' || c == '\t' || c == '\v'
+			|| c == '\n' || c == '\f' || c == '\r'))
+		return (1);
+	return (0);
 }
