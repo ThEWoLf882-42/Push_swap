@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/08 19:50:35 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 16:36:32 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct s_list
 {
 	int				content;
+	int				rank;
 	struct s_list	*next;
 	struct s_list	*tnext;
 }					t_stacks;
@@ -27,7 +28,7 @@ typedef struct s_list
 long long	ft_atoi(const char *str);
 char		*ft_itoa(int n);
 int			ft_isspace(size_t c);
-t_stacks	*ft_lstnew(int content);
+t_stacks	*ft_lstnew(int content, int argc);
 void		ft_lstadd_back(t_stacks **alst, t_stacks *new);
 t_stacks	*ft_lstlast(t_stacks *lst);
 t_stacks	*ft_tlstlast(t_stacks *lst);

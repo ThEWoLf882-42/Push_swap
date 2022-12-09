@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 13:42:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/08 19:50:18 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 16:39:08 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	pa(t_stacks **a, t_stacks **b)
 {
 	if (ft_lstsize((*b)) > 0)
 	{
-		ft_lstadd_front(a, ft_lstnew((*b)->content));
+		ft_lstadd_front(a, ft_lstnew((*b)->content, ft_lstsize((*a)) - 1));
 		(*b) = (*b)->next;
 		ft_settnext(a);
 		ft_setnext(a);
