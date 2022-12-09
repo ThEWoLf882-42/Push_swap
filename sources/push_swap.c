@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 17:01:22 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 17:27:24 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,16 @@ int	main(int argc, char **argv)
 		if (a == NULL)
 			return (0);
 		sort(&a, &b);
-		while (a)
-		{
-			printf("a = %d\n", a->content);
-			a = a->next;
-		}
-		printf("\n");
-		while (b)
-		{
-			printf("b = %d\n", b->content);
-			b = b->next;
-		}
+		// while (a)
+		// {
+		// 	printf("a = %d\n", a->content);
+		// 	a = a->next;
+		// }
+		// printf("\n");
+		// while (b)
+		// {
+		// 	printf("b = %d\n", b->content);
+		// 	b = b->next;
+		// }
 	}
 }
