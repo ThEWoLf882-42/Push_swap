@@ -6,13 +6,13 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 16:33:40 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 19:25:01 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 17:11:08 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ra(t_stacks **a)
+void	ra(t_stacks **a, int i)
 {
 	t_stacks	*m;
 
@@ -29,4 +29,6 @@ void	ra(t_stacks **a)
 		ft_setnext(a);
 		ft_cleartnext(a);
 	}
+	if (i == 1)
+		write(1, "ra", 2);
 }

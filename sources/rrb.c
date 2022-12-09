@@ -6,13 +6,13 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 19:54:35 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 19:58:09 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 17:13:44 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rrb(t_stacks **b)
+void	rrb(t_stacks **b, int i)
 {
 	t_stacks	*m;
 
@@ -25,4 +25,6 @@ void	rrb(t_stacks **b)
 		ft_setnext(b);
 		ft_cleartnext(b);
 	}
+	if (i == 1)
+		write(1, "rrb", 3);
 }

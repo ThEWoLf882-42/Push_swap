@@ -6,13 +6,13 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 19:35:56 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 16:39:38 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 17:10:47 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pb(t_stacks **a, t_stacks **b)
+void	pb(t_stacks **a, t_stacks **b, int i)
 {
 	if (ft_lstsize((*a)) > 0)
 	{
@@ -22,4 +22,6 @@ void	pb(t_stacks **a, t_stacks **b)
 		ft_setnext(b);
 		ft_cleartnext(b);
 	}
+	if (i == 1)
+		write(1, "pb", 2);
 }

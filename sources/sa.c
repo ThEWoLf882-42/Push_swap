@@ -6,13 +6,13 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:37:02 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 19:12:27 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 17:14:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sa(t_stacks **a)
+void	sa(t_stacks **a, int i)
 {
 	t_stacks	*m;
 
@@ -26,4 +26,6 @@ void	sa(t_stacks **a)
 		ft_setnext(a);
 		ft_cleartnext(a);
 	}
+	if (i == 1)
+		write(1, "sa", 2);
 }
