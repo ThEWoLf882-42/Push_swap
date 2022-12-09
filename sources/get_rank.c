@@ -1,34 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rb.c                                               :+:      :+:    :+:   */
+/*   get_rank.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 18:42:30 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 17:22:05 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/09 17:18:31 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/09 17:20:21 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rb(t_stacks **b, int i)
+void	get_rank(t_stacks *s)
 {
 	t_stacks	*m;
+	t_stacks	*t;
 
-	if (ft_lstsize(&**b) > 1)
+	m = s;
+	t = s;
+	while (s)
 	{
-		m = (*b)->next;
-		while (m->next)
+		while (t)
 		{
-			m->tnext = m->next;
-			m = m->next;
+			if (s->content < t->content)
+				s->rank -= 1;
+			t = t->next;
 		}
-		m->tnext = (*b);
-		(*b) = (*b)->next;
-		ft_setnext(b);
-		ft_cleartnext(b);
+		t = m;
+		s = s->next;
 	}
-	if (i == 1)
-		write(1, "rb\n", 3);
 }
