@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_maxint.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 17:24:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 14:53:17 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/12 13:55:55 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/12 14:44:31 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_stacks	*ft_lstnew(int content, int argc)
+int	ft_maxint(t_stacks **s)
 {
-	t_stacks	*new;
+	t_stacks	*m;
+	int			i;
 
-	new = malloc(sizeof(t_stacks));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->rank = argc - 2;
-	new->pos = 0;
-	new->next = NULL;
-	new->tnext = NULL;
-	return (new);
+	m = (*s);
+	i = 0;
+	while (m)
+	{
+		if (m->rank > i)
+			i = m->rank;
+		m = m->next;
+	}
+	return (ft_strlen(ft_itoa(i)));
 }

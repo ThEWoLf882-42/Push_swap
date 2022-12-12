@@ -6,11 +6,11 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 14:08:19 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/11 14:12:45 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/12 13:02:21 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
 void	get_pos(t_stacks **s)
 {

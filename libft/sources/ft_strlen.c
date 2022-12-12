@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 17:24:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 14:53:17 by agimi            ###   ########.fr       */
+/*   Created: 2022/09/29 15:09:35 by agimi             #+#    #+#             */
+/*   Updated: 2022/10/22 15:23:53 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_stacks	*ft_lstnew(int content, int argc)
+size_t	ft_strlen(const char *a)
 {
-	t_stacks	*new;
+	int	i;
 
-	new = malloc(sizeof(t_stacks));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->rank = argc - 2;
-	new->pos = 0;
-	new->next = NULL;
-	new->tnext = NULL;
-	return (new);
+	i = 0;
+	while (a[i])
+	{
+		i++;
+	}
+	return (i);
 }

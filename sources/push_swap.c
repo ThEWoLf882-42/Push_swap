@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/11 19:53:06 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/12 14:39:42 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,16 +27,16 @@ int	main(int argc, char **argv)
 		get_pos(&a);
 		get_rank(&a);
 		sort(&a, &b);
-		// while (a)
-		// {
-		// 	printf("a = %d	pos = %d	rank = %d\n", a->content, a->pos, a->rank);
-		// 	a = a->next;
-		// }
-		// printf("\n");
-		// while (b)
-		// {
-		// 	printf("b = %d\n", b->content);
-		// 	b = b->next;
-		// }
+		while (a)
+		{
+			printf("a = %d rank = %d\n", a->content, a->rank);
+			a = a->next;
+		}
+		printf("\n");
+		while (b)
+		{
+			printf("b = %d\n", b->content);
+			b = b->next;
+		}
 	}
 }

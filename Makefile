@@ -14,7 +14,8 @@ HEADERS_DIRECTORY = ./includes/
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./sources/
-SOURCES_LIST =	get_rank.c \
+SOURCES_LIST =	get_pos.c \
+				get_rank.c \
 				inita.c \
 				its_ok.c \
 				pa.c \

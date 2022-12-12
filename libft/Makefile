@@ -16,14 +16,15 @@ SOURCES_LIST =	ft_atoi.c \
  	 			ft_lstlast.c \
  	 			ft_lstnew.c \
  	 			ft_lstsize.c \
+				ft_maxint.c \
  	 			ft_onlyone.c \
  	 			ft_setnext.c \
  	 			ft_setrr.c \
  	 			ft_settnext.c \
  	 			ft_strcmp.c \
  	 			ft_strdup.c \
+				ft_strlen.c \
  	 			ft_tlstlast.c \
-				get_pos.c \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 OBJECTS_DIRECTORY = ./objects/
