@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:18:31 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 18:47:28 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/12 19:42:19 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ void	get_rank(t_stacks **s)
 	m = *s;
 	while (m)
 	{
-		m->srank = ft_itoa2(m->rank, ft_maxint(s) + 1);
+		m->srank = ft_itoa2(m->rank, ft_maxint(s));
 		m = m->next;
 	}
 }
