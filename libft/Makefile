@@ -23,6 +23,7 @@ SOURCES_LIST =	ft_atoi.c \
  	 			ft_strcmp.c \
  	 			ft_strdup.c \
  	 			ft_tlstlast.c \
+				get_pos.c \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 OBJECTS_DIRECTORY = ./objects/

@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   reset_rank.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 17:24:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/11 14:07:40 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/11 18:20:22 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/11 18:22:54 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-t_stacks	*ft_lstnew(int content, int argc)
+void	reset_rank(t_stacks **s)
 {
-	t_stacks	*new;
+	t_stacks	*m;
 
-	new = malloc(sizeof(t_stacks));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->rank = argc - 1;
-	new->pos = 0;
-	new->next = NULL;
-	new->tnext = NULL;
-	return (new);
+	m = *s;
+	while (m)
+	{
+		m->rank = ft_lstsize((*s));
+		m = m->next;
+	}
 }

@@ -8,3 +8,5 @@ push_swap
 *.swp
 *.dSYM/
 checker_Mac
+build
+objects

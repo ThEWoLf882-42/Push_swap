@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 18:42:30 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 17:22:05 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/11 14:13:52 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	rb(t_stacks **b, int i)
 		(*b) = (*b)->next;
 		ft_setnext(b);
 		ft_cleartnext(b);
+		get_pos(b);
 	}
 	if (i == 1)
 		write(1, "rb\n", 3);

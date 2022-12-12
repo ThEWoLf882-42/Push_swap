@@ -1,28 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   sort2.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 17:24:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/11 14:07:40 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/09 19:54:40 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/11 18:01:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-t_stacks	*ft_lstnew(int content, int argc)
+void	sort2(t_stacks **a)
 {
-	t_stacks	*new;
-
-	new = malloc(sizeof(t_stacks));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->rank = argc - 1;
-	new->pos = 0;
-	new->next = NULL;
-	new->tnext = NULL;
-	return (new);
+	get_rank(a);
+	if (!its_ok(a))
+		sa(a, 1);
 }

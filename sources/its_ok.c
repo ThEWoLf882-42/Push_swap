@@ -1,28 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   its_ok.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/03 17:24:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/11 14:07:40 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/09 19:33:49 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/11 15:58:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-t_stacks	*ft_lstnew(int content, int argc)
+int	its_ok(t_stacks **s)
 {
-	t_stacks	*new;
+	t_stacks	*m;
+	int			i;
 
-	new = malloc(sizeof(t_stacks));
-	if (!new)
-		return (NULL);
-	new->content = content;
-	new->rank = argc - 1;
-	new->pos = 0;
-	new->next = NULL;
-	new->tnext = NULL;
-	return (new);
+	m = (*s);
+	i = 0;
+	while ((*s)->next)
+	{
+		if ((*s)->rank != ((*s)->next->rank) - 1)
+		{
+			(*s) = m;
+			return (0);
+		}
+		(*s) = (*s)->next;
+	}
+	(*s) = m;
+	return (1);
 }

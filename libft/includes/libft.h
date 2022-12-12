@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 16:36:32 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/11 14:10:23 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ typedef struct s_list
 {
 	int				content;
 	int				rank;
+	int				pos;
 	struct s_list	*next;
 	struct s_list	*tnext;
 }					t_stacks;
@@ -42,5 +43,6 @@ int			ft_digit(char *s);
 int			ft_onlyone(int argc, char **argv);
 int			ft_strcmp(const char *s1, const char *s2);
 void		ft_lstadd_front(t_stacks **alst, t_stacks *new);
+void		get_pos(t_stacks **s);
 
 #endif

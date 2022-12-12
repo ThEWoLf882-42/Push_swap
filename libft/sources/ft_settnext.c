@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 14:19:41 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 19:45:08 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/09 20:14:07 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,6 @@ void	ft_settnext(t_stacks **s)
 	int	j;
 
 	j = 1;
-	while ((++j < (ft_lstsize(*s) + 2)))
+	while ((++j < (ft_lstsize(*s) + 1)))
 		ft_tlstlast(*s)->tnext = ft_tlstlast(*s)->next;
 }

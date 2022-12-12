@@ -16,10 +16,12 @@ HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 SOURCES_DIRECTORY = ./sources/
 SOURCES_LIST =	get_rank.c \
 				inita.c \
+				its_ok.c \
 				pa.c \
 				pb.c \
 				ra.c \
 				rb.c \
+				reset_rank.c \
 				rr.c \
 				rra.c \
 				rrb.c \
@@ -27,6 +29,9 @@ SOURCES_LIST =	get_rank.c \
 				sa.c \
 				sb.c \
 				sort.c \
+				sort2.c \
+				sort3.c \
+				sort5.c \
 				ss.c \
 
 SOURCES_LIST_PS = push_swap.c
