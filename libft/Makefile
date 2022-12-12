@@ -11,6 +11,7 @@ SOURCES_LIST =	ft_atoi.c \
  	 			ft_digit.c \
  	 			ft_isspace.c \
  	 			ft_itoa.c \
+				ft_itoa2.c \
  	 			ft_lstadd_back.c \
 				ft_lstadd_front.c \
  	 			ft_lstlast.c \

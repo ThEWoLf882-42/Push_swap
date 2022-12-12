@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/05 14:35:48 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 16:27:57 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/12 16:29:29 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/12 17:47:03 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	count_size(long nb)
+static size_t count_size(long nb)
 {
-	size_t	size;
+	size_t size;
 
 	size = 0;
 	if (nb < 0)
@@ -35,31 +35,30 @@ static size_t	count_size(long nb)
 	return (size);
 }
 
-char	*ft_itoa(int n)
+char	*ft_itoa2(int n, int i)
 {
 	size_t	size;
 	long	an;
 	char	*as;
-	int		anega;
+	int		j;
+	size_t	t;
 
-	size = count_size((long) n);
-	as = (char *) malloc(size + 1);
+	j = -1;
+	t = 0;
+	size = count_size((long)n);
+	as = (char *)malloc(i + 1);
 	if (!as)
 		return (0);
-	an = (long) n;
-	anega = 0;
-	if (an < 0)
+	an = (long)n;
+	as[i] = '\0';
+	while (t != size)
 	{
-		an = an * (-1);
-		as[0] = '-';
-		anega = 1;
-	}
-	as[size] = '\0';
-	while (size > (size_t) anega)
-	{
-		as[size - 1] = an % 10 + '0';
+		as[i - (size - size + 1)] = an % 10 + '0';
 		an = an / 10;
-		size--;
+		i--;
+		t++;
 	}
+	while (++j < i)
+		as[j] = '0';
 	return (as);
 }

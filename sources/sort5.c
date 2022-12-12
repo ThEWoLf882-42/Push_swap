@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:32:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 14:57:05 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/12 18:45:11 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@ void	sort5(t_stacks **a, t_stacks **b)
 	int	j;
 	int	l;
 
-	j = ft_maxint(a) - 1;
-	while (j >= 0)
+	j = ft_maxint(a) + 1;
+	while (--j >= 0)
 	{
 		i = -1;
 		while (++i <= 9)
 		{
 			l = ft_lstsize(*a) + 1;
-			while (--l >= 0)
+			while (--l > 0)
 			{
-				if (ft_itoa((*a)->rank)[j] == i)
+				if (ft_atoi(&(*a)->srank[j]) == i)
 					pb(a, b, 1);
 				else
 					ra(a, 1);
@@ -35,6 +35,6 @@ void	sort5(t_stacks **a, t_stacks **b)
 		}
 		while ((*b))
 			pa(a, b, 1);
-		j--;
+		get_rank(a);
 	}
 }

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 17:18:31 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 20:06:20 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/12 18:47:28 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,24 @@ void	get_rank(t_stacks **s)
 	t_stacks	*m;
 	t_stacks	*t;
 
+	reset_rank(s);
 	m = (*s);
 	t = (*s);
-	while ((*s))
+	while (m)
 	{
 		while (t)
 		{
-			if ((*s)->content < t->content)
-				(*s)->rank -= 1;
+			if (m->content < t->content)
+				m->rank -= 1;
 			t = t->next;
 		}
-		t = m;
-		(*s) = (*s)->next;
+		t = *s;
+		m = m->next;
 	}
-	(*s) = m;
+	m = *s;
+	while (m)
+	{
+		m->srank = ft_itoa2(m->rank, ft_maxint(s) + 1);
+		m = m->next;
+	}
 }

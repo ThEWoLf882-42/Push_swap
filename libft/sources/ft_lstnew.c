@@ -6,13 +6,13 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:24:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 14:53:17 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/12 17:57:56 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_stacks	*ft_lstnew(int content, int argc)
+t_stacks	*ft_lstnew(int content)
 {
 	t_stacks	*new;
 
@@ -20,8 +20,8 @@ t_stacks	*ft_lstnew(int content, int argc)
 	if (!new)
 		return (NULL);
 	new->content = content;
-	new->rank = argc - 2;
-	new->pos = 0;
+	new->rank = 0;
+	new->srank = NULL;
 	new->next = NULL;
 	new->tnext = NULL;
 	return (new);
