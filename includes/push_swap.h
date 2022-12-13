@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:29 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/13 14:23:07 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/13 17:24:06 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ void		sort3a(t_stacks **a);
 void		sort3b(t_stacks **b);
 void		sort4(t_stacks **a, t_stacks **b);
 void		sort5(t_stacks **a, t_stacks **b);
+void		sort_them_all(t_stacks **a, t_stacks **b);
 
 #endif

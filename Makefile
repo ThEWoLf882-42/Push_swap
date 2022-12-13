@@ -28,6 +28,7 @@ SOURCES_LIST =	get_rank.c \
 				rrr.c \
 				sa.c \
 				sb.c \
+				sort_them_all.c \
 				sort.c \
 				sort2.c \
 				sort3.c \

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:10:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/13 14:27:22 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/13 17:25:07 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ void	sort(t_stacks **a, t_stacks **b)
 		sort4(a, b);
 	else if (ft_lstsize((*a)) == 5)
 		sort5(a, b);
+	else if (ft_lstsize((*a)) >= 5 && !its_ok(a))
+		sort_them_all(a, b);
 }
 
 // while ((*a))
