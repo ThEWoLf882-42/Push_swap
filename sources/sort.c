@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 16:10:46 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 15:25:55 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/13 14:27:22 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,15 @@
 
 void	sort(t_stacks **a, t_stacks **b)
 {
-	t_stacks	*m;
-	int			i;
-	int			j;
-
-	i = 1;
-	j = 1;
-	m = (*a);
 	if (ft_lstsize((*a)) == 2)
-		sort2(a);
+		sort2a(a);
 	else if (ft_lstsize((*a)) == 3)
-		sort3(a);
-	else if (ft_lstsize((*a)) >= 5 && !its_ok(a))
+		sort3a(a);
+	else if (ft_lstsize((*a)) == 4)
+		sort4(a, b);
+	else if (ft_lstsize((*a)) == 5)
 		sort5(a, b);
 }
-
 
 // while ((*a))
 // {

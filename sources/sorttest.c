@@ -1,27 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort2.c                                            :+:      :+:    :+:   */
+/*   sort5.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 19:54:40 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/13 13:59:04 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/11 17:32:55 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/13 13:37:48 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort2a(t_stacks **a)
+void	sorttest(t_stacks **a, t_stacks **b)
 {
-	get_rank(a);
-	if (!its_ok(a))
-		sa(a, 1);
-}
+	int	i;
+	int	j;
+	int	l;
 
-void	sort2b(t_stacks **b)
-{
-	get_rank(b);
-	if (!its_ok(b))
-		sb(b, 1);
+	j = ft_maxint(a);
+	while (--j >= 0)
+	{
+		i = -1;
+		while (++i <= 9)
+		{
+			l = ft_lstsize(*a) + 1;
+			while (--l > 0)
+			{
+				if ((*a)->srank[j] - 48 == i)
+					pb(a, b, 1);
+				else
+					ra(a, 1);
+			}
+		}
+		while ((*b))
+			pa(a, b, 1);
+		get_rank(a);
+	}
 }

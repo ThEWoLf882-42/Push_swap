@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort2.c                                            :+:      :+:    :+:   */
+/*   sort4.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 19:54:40 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/13 13:59:04 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/13 14:22:44 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/13 14:25:39 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort2a(t_stacks **a)
+void	sort4(t_stacks **a, t_stacks **b)
 {
-	get_rank(a);
 	if (!its_ok(a))
-		sa(a, 1);
-}
-
-void	sort2b(t_stacks **b)
-{
-	get_rank(b);
-	if (!its_ok(b))
-		sb(b, 1);
+	{
+		while ((*a)->rank != 1)
+			ra(a, 1);
+		pb(a, b, 1);
+		sort3a(a);
+		pa(a, b, 1);
+	}
 }
