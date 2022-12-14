@@ -1,40 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_rank.c                                         :+:      :+:    :+:   */
+/*   get_binary.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/09 17:18:31 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/13 17:35:45 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/13 19:11:54 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/13 19:13:46 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	get_rank(t_stacks **s)
+void	get_biary(t_stacks **s)
 {
-	t_stacks	*m;
-	t_stacks	*t;
-
-	reset_rank(s);
-	m = (*s);
-	t = (*s);
-	while (m)
+	int	i;
+	
+	while (/* condition */)
 	{
-		while (t)
-		{
-			if (m->content < t->content)
-				m->rank -= 1;
-			t = t->next;
-		}
-		t = *s;
-		m = m->next;
+		/* code */
 	}
-	m = *s;
-	while (m)
-	{
-		m->srank = ft_itoa2(m->rank, ft_maxint(s));
-		m = m->next;
-	}
+	
 }

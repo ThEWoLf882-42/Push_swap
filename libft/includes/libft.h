@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 17:58:12 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/13 18:34:35 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ long long	ft_atoi(const char *str);
 char		*ft_itoa(int n);
 char		*ft_itoa2(int n, int i);
 int			ft_isspace(size_t c);
-t_stacks	*ft_lstnew(int content);
+t_stacks	*ft_lstnew(int content, int rank, char *srank);
 void		ft_lstadd_back(t_stacks **alst, t_stacks *new);
 t_stacks	*ft_lstlast(t_stacks *lst);
 t_stacks	*ft_tlstlast(t_stacks *lst);
