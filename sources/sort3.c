@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/11 17:19:13 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/13 14:09:49 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/15 12:54:27 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	sort3a(t_stacks **a)
 			break ;
 		if ((*a)->rank == 3)
 			ra(a, 1);
-		else if ((*a)->rank == 2)
-			sa(a, 1);
 		else if (ft_lstlast((*a))->rank == 1)
 			rra(a, 1);
+		else if ((*a)->rank == 2)
+			sa(a, 1);
 		else if (ft_lstlast((*a))->rank == 2)
 		{
 			ra(a, 1);

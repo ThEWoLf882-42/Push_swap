@@ -15,6 +15,7 @@ HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./sources/
 SOURCES_LIST =	get_binary.c \
+				get_pos.c \
 				get_rank.c \
 				inita.c \
 				its_ok.c \

@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 13:44:30 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/13 18:35:01 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/15 12:59:56 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ t_stacks	*inita(t_stacks *a, int argc, char **argv)
 			return (NULL);
 		}
 		else
-			ft_lstadd_back(&a, ft_lstnew(ft_atoi(argv[i]), 0, NULL));
+			ft_lstadd_back(&a, ft_lstnew(ft_atoi(argv[i]), 0, NULL, 1));
 	}
 	get_rank(&a);
 	return (a);

@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_maxint.c                                        :+:      :+:    :+:   */
+/*   get_pos.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/12 13:55:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/15 12:45:59 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/15 13:01:59 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/15 13:06:35 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_maxint(t_stacks **s, int x)
+void	get_pos(t_stacks **s)
 {
 	t_stacks	*m;
 	int			i;
@@ -21,13 +21,7 @@ int	ft_maxint(t_stacks **s, int x)
 	i = 0;
 	while (m)
 	{
-		if (m->rank > i)
-			i = m->rank;
+		m->pos = ++i;
 		m = m->next;
 	}
-	if (x == 1)
-		return (ft_strlen(ft_itoa(i)));
-	if (x == 2)
-		return (i);
-	return (0);
 }

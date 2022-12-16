@@ -6,15 +6,15 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 16:29:29 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 17:47:03 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/14 14:22:53 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t count_size(long nb)
+static size_t	count_size(long nb)
 {
-	size_t size;
+	size_t	size;
 
 	size = 0;
 	if (nb < 0)
