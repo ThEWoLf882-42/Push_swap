@@ -36,6 +36,8 @@ SOURCES_LIST =	get_binary.c \
 				sort3.c \
 				sort4.c \
 				sort5.c \
+				sorta_3.c \
+				sortb_3.c \
 				ss.c \
 
 SOURCES_LIST_PS = push_swap.c

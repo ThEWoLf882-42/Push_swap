@@ -11,3 +11,4 @@ checker_Mac
 build
 objects
 f
+*.back

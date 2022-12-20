@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort_them_all.c                                    :+:      :+:    :+:   */
+/*   sortb_3.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/19 16:44:39 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/19 17:37:03 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/19 17:31:59 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/20 12:18:44 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	sort_a(t_stacks **a, t_stacks **b)
+void	sortb_3(t_stacks **a, t_stacks **b)
 {
-	
+	int	i;
+
+	while (ft_lstsize(a) > 3 && !its_ok(a))
+	{
+		
+	}
 }
 
-void	sort_b(t_stacks **a, t_stacks **b)
+int	ft_case_rrarrb(t_stacks **a, t_stacks **b, int c)
 {
-	if (ft_lstsize(*a) > 3 && !its_ok(a))
-		pb(a, b, 1);
-	if (ft_lstsize(*a) > 3 && !its_ok(a))
-		pb(a, b, 1);
-	if (ft_lstsize(*a) > 3 && !its_ok(a))
-		sortb_3(a, b);
-	if (!its_ok(a))
-		sort3a(a);
-}
+	int	i;
 
-void	sort_them_all(t_stacks **a, t_stacks **b)
-{
-	
+	i = 0;
+	if ()
 }
