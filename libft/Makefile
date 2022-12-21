@@ -19,6 +19,7 @@ SOURCES_LIST =	ft_atoi.c \
  	 			ft_lstsize.c \
 				ft_maxint.c \
  	 			ft_onlyone.c \
+				ft_rpos.c \
  	 			ft_setnext.c \
  	 			ft_setrr.c \
  	 			ft_settnext.c \

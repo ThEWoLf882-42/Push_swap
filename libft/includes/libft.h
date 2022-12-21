@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/15 12:57:33 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/21 18:16:32 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,7 @@ int			ft_strcmp(const char *s1, const char *s2);
 void		ft_lstadd_front(t_stacks **alst, t_stacks *new);
 size_t		ft_strlen(const char *a);
 int			ft_maxint(t_stacks **s, int x);
+int			ft_minint(t_stacks **s);
+int			ft_rpos(t_stacks **s, int n);
 
 #endif
