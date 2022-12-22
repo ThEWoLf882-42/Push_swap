@@ -1,21 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_rpos.c                                          :+:      :+:    :+:   */
+/*   rpos.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/21 18:15:09 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/21 18:19:58 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/22 19:39:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-int	ft_rpos(t_stacks **s, int n)
+int	rpos(t_stacks **s, int n)
 {
 	t_stacks	*m;
 
+	get_pos(s);
 	m = (*s);
 	while (m->content != n)
 		m = m->next;

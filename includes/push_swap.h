@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:29 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/19 17:35:10 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/22 19:38:24 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,22 @@ int			sbin(t_stacks **s);
 void		get_pos(t_stacks **s);
 void		sorta_3(t_stacks **a, t_stacks **b);
 void		sortb_3(t_stacks **a, t_stacks **b);
+int			case_rrarrb(t_stacks **a, t_stacks **b, int c);
+int			case_rarb(t_stacks **a, t_stacks **b, int c);
+int			case_rarrb(t_stacks **a, t_stacks **b, int c);
+int			case_rrarb(t_stacks **a, t_stacks **b, int c);
+int			case_rarb_a(t_stacks **a, t_stacks **b, int c);
+int			case_rrarrb_a(t_stacks **a, t_stacks **b, int c);
+int			case_rarrb_a(t_stacks **a, t_stacks **b, int c);
+int			case_rrarb_a(t_stacks **a, t_stacks **b, int c);
+int			b_place(t_stacks **b, int nb);
+int			a_place(t_stacks **a, int nb);
+int			apply_rarb(t_stacks **a, t_stacks **b, int c, char s);
+int			apply_rrarrb(t_stacks **a, t_stacks **b, int c, char s);
+int			apply_rrarb(t_stacks **a, t_stacks **b, int c, char s);
+int			apply_rarrb(t_stacks **a, t_stacks **b, int c, char s);
+int			rotate_type_ba(t_stacks **a, t_stacks **b);
+int			rotate_type_ab(t_stacks **a, t_stacks **b);
+int			rpos(t_stacks **s, int n);
 
 #endif

@@ -14,7 +14,10 @@ HEADERS_DIRECTORY = ./includes/
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./sources/
-SOURCES_LIST =	get_binary.c \
+SOURCES_LIST =	apply.c \
+				cases_ab.c \
+				cases_ba.c \
+				get_binary.c \
 				get_pos.c \
 				get_rank.c \
 				inita.c \
@@ -24,21 +27,22 @@ SOURCES_LIST =	get_binary.c \
 				ra.c \
 				rb.c \
 				reset_rank.c \
+				rpos.c \
 				rr.c \
 				rra.c \
 				rrb.c \
 				rrr.c \
 				sa.c \
 				sb.c \
+				sort_3.c \
 				sort_them_all.c \
 				sort.c \
 				sort2.c \
 				sort3.c \
 				sort4.c \
 				sort5.c \
-				sorta_3.c \
-				sortb_3.c \
 				ss.c \
+				type.c \
 
 SOURCES_LIST_PS = push_swap.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
