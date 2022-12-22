@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 13:55:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/21 18:11:39 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/22 19:46:46 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ int	ft_minint(t_stacks **s)
 	int			i;
 
 	m = (*s);
-	i = ft_maxint(s, 2);
+	i = m->content;
 	while (m)
 	{
-		if (m->rank < i)
-			i = m->rank;
+		if (m->content < i)
+			i = m->content;
 		m = m->next;
 	}
 	return (i);
