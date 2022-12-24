@@ -1,6 +1,6 @@
 NAME_PS = push_swap
 
-CC = cc
+CC = gcc
 FLAGS = -Wall -Werror -Wextra -O3
 LIBRARIES = -L$(LIBFT_DIRECTORY)
 INCLUDES = -I$(HEADERS_DIRECTORY) -I$(LIBFT_HEADERS)
