@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/09 19:33:49 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/23 19:41:07 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/24 18:46:31 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,17 +15,33 @@
 int	its_ok(t_stacks **s)
 {
 	t_stacks	*m;
+	int			i;
 
 	m = (*s);
-	while ((*s)->next)
+	i = m->content;
+	while (m)
 	{
-		if ((*s)->rank != ((*s)->next->rank) - 1)
-		{
-			(*s) = m;
+		if (i > m->content)
 			return (0);
-		}
-		(*s) = (*s)->next;
+		i = m->content;
+		m = m->next;
 	}
-	(*s) = m;
 	return (1);
 }
+
+// int	its_ok(t_stacks **s)
+// {
+// 	t_stacks	*m;
+
+// 	m = (*s);
+// 	while (m->next)
+// 	{
+// 		if (m->rank != (m->next->rank) - 1)
+// 		{
+// 			m = m;
+// 			return (0);
+// 		}
+// 		m = m->next;
+// 	}
+// 	return (1);
+// }

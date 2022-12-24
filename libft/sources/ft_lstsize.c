@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 19:41:02 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 16:30:04 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/24 18:57:36 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ int	ft_lstsize(t_stacks *lst)
 	size = 0;
 	while (lst)
 	{
-		size++;
 		lst = lst->next;
+		size++;
 	}
 	return (size);
 }

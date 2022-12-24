@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 17:31:59 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/23 17:30:09 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/24 19:03:49 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,14 +43,14 @@ int	a_place(t_stacks **a, int nb)
 	t_stacks	*m;
 
 	i = 1;
-	if (nb > (*a)->content && nb < ft_lstlast(*a)->content)
+	if (nb < (*a)->content && nb > ft_lstlast(*a)->content)
 		i = 0;
 	else if (nb > ft_maxint(a, 2) || nb < ft_minint(a))
-		i = rpos(a, ft_maxint(a, 2));
+		i = rpos(a, ft_minint(a));
 	else
 	{
 		m = (*a);
-		while (m->content < nb || m->next->content > nb)
+		while (m->content > nb || m->next->content < nb)
 		{
 			m = m->next;
 			i++;

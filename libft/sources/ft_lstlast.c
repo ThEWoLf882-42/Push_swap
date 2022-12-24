@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:28:35 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/04 14:34:15 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/24 18:50:56 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 t_stacks	*ft_lstlast(t_stacks *lst)
 {
-	while (lst && lst->next)
+	if (!lst)
+		return (NULL);
+	while (lst->next)
 		lst = lst->next;
 	return (lst);
 }
