@@ -1,6 +1,6 @@
 .DS_Store
 .vscode
-#push_swap
+push_swap
 *.o
 *.lib
 *.a
