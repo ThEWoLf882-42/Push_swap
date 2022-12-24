@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/22 19:38:28 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/24 19:56:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@ typedef struct s_list
 {
 	int				content;
 	int				rank;
-	int				pos;
-	char			*srank;
-	char			*bin;
 	struct s_list	*next;
 	struct s_list	*tnext;
 }					t_stacks;
@@ -32,7 +29,7 @@ long long	ft_atoi(const char *str);
 char		*ft_itoa(int n);
 char		*ft_itoa2(int n, int i);
 int			ft_isspace(size_t c);
-t_stacks	*ft_lstnew(int content, int rank, char *srank, int pos);
+t_stacks	*ft_lstnew(int content, int rank);
 void		ft_lstadd_back(t_stacks **alst, t_stacks *new);
 t_stacks	*ft_lstlast(t_stacks *lst);
 t_stacks	*ft_tlstlast(t_stacks *lst);
@@ -47,7 +44,7 @@ int			ft_onlyone(int argc, char **argv);
 int			ft_strcmp(const char *s1, const char *s2);
 void		ft_lstadd_front(t_stacks **alst, t_stacks *new);
 size_t		ft_strlen(const char *a);
-int			ft_maxint(t_stacks **s, int x);
+int			ft_maxint(t_stacks **s);
 int			ft_minint(t_stacks **s);
 
 #endif

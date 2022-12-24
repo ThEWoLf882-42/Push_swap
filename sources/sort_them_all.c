@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 16:44:39 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/24 12:06:09 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/24 19:22:51 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ void	sort_them_all(t_stacks **a, t_stacks **b)
 {
 	int	i;
 
-	// get_pos(a);
-	// get_rank(a);
 	sort_b(a, b);
 	sort_a(a, b);
 	i = rpos(a, ft_minint(a));
