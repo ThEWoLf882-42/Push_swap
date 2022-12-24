@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 13:44:30 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/24 19:57:16 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/24 20:05:58 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ t_stacks	*inita(t_stacks *a, int argc, char **argv)
 			|| !(ft_atoi(argv[i]) >= -2147483648
 				&& ft_atoi(argv[i]) <= 2147483647))
 		{
-			write(1, "Error\n", 6);
+			write(2, "Error\n", 6);
 			return (NULL);
 		}
 		else
