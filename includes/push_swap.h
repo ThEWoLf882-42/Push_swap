@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:29 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/25 15:03:38 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/25 15:52:57 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,6 @@ int			rpos(t_stacks **s, int n);
 void		free_them_all(t_stacks **s);
 void		one_arg(t_stacks **a, char **argv);
 void		only_one(t_stacks **a);
+void		the_error(t_stacks **a);
 
 #endif

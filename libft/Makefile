@@ -22,7 +22,6 @@ SOURCES_LIST =	ft_atoi.c \
  	 			ft_setrr.c \
  	 			ft_settnext.c \
  	 			ft_strcmp.c \
- 	 			ft_strdup.c \
 				ft_strlen.c \
  	 			ft_tlstlast.c \
 

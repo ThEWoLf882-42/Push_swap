@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/24 19:56:38 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/25 17:13:58 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ void		ft_lstadd_back(t_stacks **alst, t_stacks *new);
 t_stacks	*ft_lstlast(t_stacks *lst);
 t_stacks	*ft_tlstlast(t_stacks *lst);
 int			ft_lstsize(t_stacks *lst);
-char		*ft_strdup(const char *s1);
 void		ft_settnext(t_stacks **s);
 void		ft_setnext(t_stacks **s);
 void		ft_cleartnext(t_stacks **s);
@@ -42,6 +41,7 @@ void		ft_setrr(t_stacks **s);
 int			ft_digit(char *s);
 int			ft_onlyone(int argc, char **argv);
 int			ft_strcmp(const char *s1, const char *s2);
+int			ft_strcmp1(const char *s1, const char *s2);
 void		ft_lstadd_front(t_stacks **alst, t_stacks *new);
 size_t		ft_strlen(const char *a);
 int			ft_maxint(t_stacks **s);
