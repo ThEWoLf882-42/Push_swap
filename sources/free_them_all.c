@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   free_them_all.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 13:42:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/25 11:59:48 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/25 11:55:10 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/25 13:25:40 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stacks **a, t_stacks **b, int i)
+void	free_them_all(t_stacks **s)
 {
 	t_stacks	*m;
 
-	m = (*b);
-	if (ft_lstsize((*b)) > 0)
+	while (*s)
 	{
-		ft_lstadd_front(a, ft_lstnew((*b)->content, (*b)->rank));
-		(*b) = (*b)->next;
-		m->content = 0;
-		free(m);
-		ft_settnext(a);
-		ft_setnext(a);
-		ft_cleartnext(a);
+		m = (*s)->next;
+		(*s)->content = 0;
+		free(*s);
+		*s = m;
 	}
-	if (i == 1)
-		write(1, "pa\n", 3);
 }

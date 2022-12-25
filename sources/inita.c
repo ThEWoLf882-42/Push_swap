@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/05 13:44:30 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/24 20:05:58 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/25 13:39:22 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,26 @@ t_stacks	*inita(t_stacks *a, int argc, char **argv)
 {
 	int	i;
 
-	i = 0;
-	while (++i < argc)
+	if (argc == 2)
+		one_arg(&a, argv);
+	if (argc >= 3)
 	{
-		if ((!(ft_digit(argv[i])) || ft_onlyone(argc, argv))
-			|| ((ft_atoi(argv[i]) == 0) && ft_strcmp(argv[i], "0"))
-			|| (ft_strcmp(argv[i], ft_itoa(ft_atoi(argv[i]))))
-			|| !(ft_atoi(argv[i]) >= -2147483648
-				&& ft_atoi(argv[i]) <= 2147483647))
+		i = 0;
+		while (++i < argc)
 		{
-			write(2, "Error\n", 6);
-			return (NULL);
+			if ((!(ft_digit(argv[i])) || ft_onlyone(argc, argv))
+				|| ((ft_atoi(argv[i]) == 0) && ft_strcmp(argv[i], "0"))
+				|| (ft_strcmp(argv[i], ft_itoa(ft_atoi(argv[i]))))
+				|| !(ft_atoi(argv[i]) >= -2147483648
+					&& ft_atoi(argv[i]) <= 2147483647))
+			{
+				write(2, "Error\n", 6);
+				return (NULL);
+			}
+			else
+				ft_lstadd_back(&a, ft_lstnew(ft_atoi(argv[i]), 0));
 		}
-		else
-			ft_lstadd_back(&a, ft_lstnew(ft_atoi(argv[i]), 0));
+		get_rank(&a);
 	}
-	get_rank(&a);
 	return (a);
 }

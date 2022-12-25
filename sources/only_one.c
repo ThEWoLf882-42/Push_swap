@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pa.c                                               :+:      :+:    :+:   */
+/*   only_one.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/04 13:42:55 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/25 11:59:48 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/25 14:45:55 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/25 15:04:28 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	pa(t_stacks **a, t_stacks **b, int i)
+void	only_one(t_stacks **a)
 {
 	t_stacks	*m;
+	t_stacks	*j;
 
-	m = (*b);
-	if (ft_lstsize((*b)) > 0)
+	m = (*a);
+	while (m)
 	{
-		ft_lstadd_front(a, ft_lstnew((*b)->content, (*b)->rank));
-		(*b) = (*b)->next;
-		m->content = 0;
-		free(m);
-		ft_settnext(a);
-		ft_setnext(a);
-		ft_cleartnext(a);
+		j = m->next;
+		while (j)
+		{
+			if (j->content == m->content)
+			{
+				write(2, "Error\n", 6);
+				free_them_all(a);
+				return ;
+			}
+			j = j->next;
+		}
+		m = m->next;
 	}
-	if (i == 1)
-		write(1, "pa\n", 3);
 }

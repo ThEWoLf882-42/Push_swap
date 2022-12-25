@@ -17,9 +17,11 @@ SOURCES_DIRECTORY = ./sources/
 SOURCES_LIST =	apply.c \
 				cases_ab.c \
 				cases_ba.c \
+				free_them_all.c \
 				get_rank.c \
 				inita.c \
 				its_ok.c \
+				one_arg.c \
 				pa.c \
 				pb.c \
 				ra.c \
@@ -41,6 +43,7 @@ SOURCES_LIST =	apply.c \
 				sort5.c \
 				ss.c \
 				type.c \
+				only_one.c \
 
 SOURCES_LIST_PS = push_swap.c
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))

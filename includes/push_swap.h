@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:29 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/22 19:38:24 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/25 15:03:38 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,5 +60,8 @@ int			apply_rarrb(t_stacks **a, t_stacks **b, int c, char s);
 int			rotate_type_ba(t_stacks **a, t_stacks **b);
 int			rotate_type_ab(t_stacks **a, t_stacks **b);
 int			rpos(t_stacks **s, int n);
+void		free_them_all(t_stacks **s);
+void		one_arg(t_stacks **a, char **argv);
+void		only_one(t_stacks **a);
 
 #endif
