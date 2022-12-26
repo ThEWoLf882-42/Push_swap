@@ -1,25 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   checker.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/29 15:09:35 by agimi             #+#    #+#             */
-/*   Updated: 2022/10/22 15:23:53 by agimi            ###   ########.fr       */
+/*   Created: 2022/12/26 14:45:26 by agimi             #+#    #+#             */
+/*   Updated: 2022/12/26 15:00:02 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "push_swap.h"
 
-size_t	ft_strlen(const char *a)
+int	main(int argc, char **argv)
 {
-	int	i;
+	t_stacks	*a;
+	t_stacks	*b;
+	char		*commande;
 
-	i = 0;
-	while (a[i])
+	a = NULL;
+	b = NULL;
+	if (argc > 1)
 	{
-		i++;
+		inita(&a, argc, argv);
+		commande = 
 	}
-	return (i);
 }

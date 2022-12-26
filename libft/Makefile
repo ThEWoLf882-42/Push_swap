@@ -22,8 +22,9 @@ SOURCES_LIST =	ft_atoi.c \
  	 			ft_setrr.c \
  	 			ft_settnext.c \
  	 			ft_strcmp.c \
-				ft_strlen.c \
  	 			ft_tlstlast.c \
+				get_next_line.c \
+				get_next_line_utils.c \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 OBJECTS_DIRECTORY = ./objects/
