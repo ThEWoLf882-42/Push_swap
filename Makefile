@@ -15,7 +15,7 @@ HEADERS_DIRECTORY = ./includes/
 HEADERS = $(addprefix $(HEADERS_DIRECTORY), $(HEADERS_LIST))
 
 SOURCES_DIRECTORY = ./sources/
-SOURCES_DIRECTORY_CH = ./sources/checker
+SOURCES_DIRECTORY_CH = ./sources/
 SOURCES_LIST =	apply.c \
 				cases_ab.c \
 				cases_ba.c \
@@ -47,9 +47,9 @@ SOURCES_LIST =	apply.c \
 				type.c \
 				only_one.c \
 
-SOURCES_LIST_PS = push_swap.c
+SOURCES_LIST_PS =	push_swap.c
 SOURCES_LIST_CH =	checker.c \
-					.c \
+					checker_utils.c \
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 SOURCES_PS = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST_PS))
@@ -71,7 +71,7 @@ RESET = \033[0m
 
 .PHONY: all clean fclean re
 
-all: $(NAME_PS) 
+all: $(NAME_PS) $(NAME_CH)
 
 $(NAME_PS): $(LIBFT) $(OBJECTS_DIRECTORY) $(OBJECTS) $(OBJECTS_PS)
 	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(LIBFT) $(OBJECTS) $(OBJECTS_PS) -o $(NAME_PS)
@@ -79,7 +79,7 @@ $(NAME_PS): $(LIBFT) $(OBJECTS_DIRECTORY) $(OBJECTS) $(OBJECTS_PS)
 	@echo "$(NAME_PS): $(GREEN)$(NAME_PS) was created$(RESET)"
 
 $(NAME_CH): $(LIBFT) $(OBJECTS_DIRECTORY) $(OBJECTS) $(OBJECTS_CH)
-	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(OBJECTS) $(OBJECTS_CH) -o $(NAME_CH)
+	@$(CC) $(FLAGS) $(LIBRARIES) $(INCLUDES) $(LIBFT) $(OBJECTS) $(OBJECTS_CH) -o $(NAME_CH)
 	@echo "\n$(NAME_PS): $(GREEN)$(NAME_CH) object files were created$(RESET)"
 	@echo "$(NAME_PS): $(GREEN)$(NAME_CH) was created$(RESET)"
 

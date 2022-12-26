@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:29:39 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/26 14:36:05 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/26 16:30:28 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	tests(char *n)
 	if ((!(ft_digit(n)))
 		|| ((ft_atoi(n) == 0) && !ft_cmp0(n, "0"))
 		|| (!ft_strcmp(n, "\0"))
+		|| (ft_strcmp1(n, ft_itoa(ft_atoi(n))))
 		|| !(ft_atoi(n) >= -2147483648
 			&& ft_atoi(n) <= 2147483647))
 		return (1);

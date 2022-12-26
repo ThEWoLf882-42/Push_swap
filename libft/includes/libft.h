@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 17:23:53 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/26 15:06:16 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/26 15:10:16 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,11 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 69
+# endif
 
 typedef struct s_list
 {

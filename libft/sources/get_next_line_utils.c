@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:48:22 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/26 15:01:42 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/26 15:42:26 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -114,10 +114,7 @@ char	*notthisone(char *naah)
 	}
 	str = (char *)malloc(sizeof(char) * (ft_strlen(naah) - i + 1));
 	if (!str)
-	{
-		free(str);
 		return (NULL);
-	}
 	i++;
 	j = 0;
 	while (naah[i])

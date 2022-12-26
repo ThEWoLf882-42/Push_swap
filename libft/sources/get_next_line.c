@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/31 11:48:27 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/26 15:01:38 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/26 15:41:43 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,14 +40,14 @@ char	*kra(int fd, char *naah)
 char	*get_next_line(int fd)
 {
 	char		*ster;
-	static char	*naah;
+	static char	*naah[4096];
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (0);
-	naah = kra(fd, naah);
-	if (!naah)
+	naah[fd] = kra(fd, naah[fd]);
+	if (!naah[fd])
 		return (NULL);
-	ster = thisone(naah);
-	naah = notthisone(naah);
+	ster = thisone(naah[fd]);
+	naah[fd] = notthisone(naah[fd]);
 	return (ster);
 }
