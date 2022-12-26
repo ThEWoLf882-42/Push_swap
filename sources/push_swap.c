@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:25 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/25 17:26:34 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/26 13:12:55 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,15 @@ int	main(int argc, char **argv)
 	b = NULL;
 	if (argc > 1)
 	{
-		a = inita(a, argc, argv);
-		if (a == NULL)
-		{
-			free_them_all(&a);
-			return (0);
-		}
+		// if (ft_strcmp(argv[1], "\0"))
+		// 	the_error(&a);
+		inita(&a, argc, argv);
 		sort(&a, &b);
-		free_them_all(&a);
+		// free_them_all(&a);
+		while (a)
+		{
+			printf("a = %d\n", a->content);
+			a = a->next;
+		}
 	}
 }

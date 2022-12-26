@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 19:24:24 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/12 15:42:09 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/25 17:43:33 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	rra(t_stacks **a, int i)
 	if (ft_lstsize(&**a) > 1)
 	{
 		ft_setrr(a);
-		m = ft_lstlast(&**a);
+		m = ft_lstlast(*a);
 		m->tnext = (*a);
 		(*a) = m;
 		ft_setnext(a);
