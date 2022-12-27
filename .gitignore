@@ -7,8 +7,7 @@ push_swap
 *.out
 *.swp
 *.dSYM/
-checker_Mac
-checker
+checker*
 build
 objects
 f
