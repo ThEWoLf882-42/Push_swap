@@ -48,8 +48,7 @@ SOURCES_LIST =	apply.c \
 				only_one.c \
 
 SOURCES_LIST_PS =	push_swap.c
-SOURCES_LIST_CH =	checker.c \
-					checker_utils.c \
+SOURCES_LIST_CH =	checker.c
 
 SOURCES = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST))
 SOURCES_PS = $(addprefix $(SOURCES_DIRECTORY), $(SOURCES_LIST_PS))

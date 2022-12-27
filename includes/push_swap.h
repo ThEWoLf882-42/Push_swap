@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 16:53:29 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/26 13:13:17 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/27 15:54:08 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,15 @@
 
 void		sa(t_stacks **a, int i);
 void		sb(t_stacks **b, int i);
-void		ss(t_stacks **a, t_stacks **b);
+void		ss(t_stacks **a, t_stacks **b, int i);
 void		pa(t_stacks **a, t_stacks **b, int i);
 void		pb(t_stacks **a, t_stacks **b, int i);
 void		ra(t_stacks **a, int i);
 void		rb(t_stacks **b, int i);
-void		rr(t_stacks **a, t_stacks **b);
+void		rr(t_stacks **a, t_stacks **b, int i);
 void		rra(t_stacks **a, int i);
 void		rrb(t_stacks **b, int i);
-void		rrr(t_stacks **a, t_stacks **b);
+void		rrr(t_stacks **a, t_stacks **b, int i);
 void		inita(t_stacks **a, int argc, char **argv);
 void		sort(t_stacks **a, t_stacks **b);
 void		get_rank(t_stacks **s);

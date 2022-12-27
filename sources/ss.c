@@ -6,15 +6,16 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/03 19:29:08 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 17:22:50 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/27 15:53:27 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ss(t_stacks **a, t_stacks **b)
+void	ss(t_stacks **a, t_stacks **b, int i)
 {
 	sa(a, 0);
 	sb(b, 0);
-	write(1, "ss\n", 3);
+	if (i == 1)
+		write(1, "ss\n", 3);
 }

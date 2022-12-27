@@ -6,15 +6,16 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/04 20:04:26 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/09 17:22:31 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/27 15:54:39 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	rrr(t_stacks **a, t_stacks **b)
+void	rrr(t_stacks **a, t_stacks **b, int i)
 {
 	rra(a, 0);
 	rrb(b, 0);
-	write(1, "rrr\n", 4);
+	if (i == 1)
+		write(1, "rrr\n", 4);
 }

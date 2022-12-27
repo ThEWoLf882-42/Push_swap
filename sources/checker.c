@@ -6,78 +6,82 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:45:26 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/26 15:58:32 by agimi            ###   ########.fr       */
+/*   Updated: 2022/12/27 15:59:28 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-char	*check_com(t_stacks **a, t_stacks **b, char *commamde)
+void	check_com_sub(t_stacks **a, t_stacks **b, char *com)
 {
-	if (ft_strcmp(commamde, "sa\n"))
-		sa(a, 0);
-	if (ft_strcmp(commamde, "sb\n"))
-		sb(a, 0);
-	if (ft_strcmp(commamde, "pa\n"))
-		pa(a, b, 0);
-	if (ft_strcmp(commamde, "pb\n"))
-		pb(a, b, 0);
-	if (ft_strcmp(commamde, "ra\n"))
-		ra(a, 0);
-	if (ft_strcmp(commamde, "rb\n"))
-		rb(a, 0);
-	if (ft_strcmp(commamde, "rra\n"))
+	if (com[2] == 'a')
 		rra(a, 0);
-	if (ft_strcmp(commamde, "rrb\n"))
-		rrb(a, 0);
-	if (ft_strcmp(commamde, "rr\n"))
-		rr(a, 0);
-	if (ft_strcmp(commamde, "ss\n"))
-		ss(a, 0);
-	if (ft_strcmp(commamde, "rrr\n"))
-		rrr(a, 0);
+	else if (com[2] == 'b')
+		rrb(b, 0);
+	else if (com[2] == 'r')
+		rrr(a, b, 0);
+}
+
+char	*check_com(t_stacks **a, t_stacks **b, char *com)
+{
+	if (com[0] == 's' && com[1] == 'a' && com[2] == '\n')
+		sa(a, 0);
+	else if (com[0] == 's' && com[1] == 'b' && com[2] == '\n')
+		sb(b, 0);
+	else if (com[0] == 'p' && com[1] == 'a' && com[2] == '\n')
+		pa(a, b, 0);
+	else if (com[0] == 'p' && com[1] == 'b' && com[2] == '\n')
+		pb(a, b, 0);
+	else if (com[0] == 'r' && com[1] == 'a' && com[2] == '\n')
+		ra(a, 0);
+	else if (com[0] == 'r' && com[1] == 'b' && com[2] == '\n')
+		rb(b, 0);
+	else if (com[0] == 'r' && com[1] == 'r' && com[3] == '\n')
+		check_com_sub(a, b, com);
+	else if (com[0] == 'r' && com[1] == 'r' && com[2] == '\n')
+		rr(a, b, 0);
+	else if (com[0] == 's' && com[1] == 's' && com[2] == '\n')
+		ss(a, b, 0);
 	else
 		the_error(a);
 	return (get_next_line(0));
 }
 
-void	check(t_stacks **a, t_stacks **b, char *commamde)
+void	check(t_stacks **a, t_stacks **b, char *com)
 {
 	char	*m;
 
-	while (commamde && *commamde != '\n')
+	while (com && *com != '\n')
 	{
-		m = commamde;
-		commamde = check_com(a, b, commamde);
+		m = com;
+		com = check_com(a, b, com);
 		free(m);
 	}
-	if (*b)
-		write(1, "KO\n", 3);
-	else if (!its_ok(a))
-		write(1, "KO\n", 3);
-	else
+	if (!(*b) && its_ok(a))
 		write(1, "OK\n", 3);
-	free(m);
+	else
+		write(1, "KO\n", 3);
+	free(com);
 }
 
 int	main(int argc, char **argv)
 {
 	t_stacks	*a;
 	t_stacks	*b;
-	char		*commande;
+	char		*com;
 
 	a = NULL;
 	b = NULL;
 	if (argc > 1)
 	{
 		inita(&a, argc, argv);
-		commande = get_next_line(0);
-		if (!commande && !its_ok(&a))
+		com = get_next_line(0);
+		if (!com && !its_ok(&a))
 			write(1, "KO\n", 3);
-		else if (!commande && its_ok(&a))
+		else if (!com && its_ok(&a))
 			write(1, "OK\n", 3);
 		else
-			check(&a, &b, commande);
+			check(&a, &b, com);
 		free_them_all(&a);
 		free_them_all(&b);
 	}
