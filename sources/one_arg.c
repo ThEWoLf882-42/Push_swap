@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:29:39 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/26 16:30:28 by agimi            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:32:59 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ int	tests(char *n)
 		return (0);
 }
 
+void	fe(t_stacks **a, char *n)
+{
+	free(n);
+	the_error(a);
+}
+
 void	loop(t_stacks **a, char **argv, char *n, int r)
 {
 	int	i;
@@ -32,7 +38,7 @@ void	loop(t_stacks **a, char **argv, char *n, int r)
 
 	i = 0;
 	if (!ft_strcmp(argv[r], "\0"))
-		the_error(a);
+		fe(a, n);
 	while (argv[r][i])
 	{
 		j = 0;
@@ -44,10 +50,7 @@ void	loop(t_stacks **a, char **argv, char *n, int r)
 			i++;
 		n[j] = '\0';
 		if (tests(n))
-		{
-			free(n);
-			the_error(a);
-		}
+			fe(a, n);
 		else
 			ft_lstadd_back(a, ft_lstnew(ft_atoi(n), 0));
 	}

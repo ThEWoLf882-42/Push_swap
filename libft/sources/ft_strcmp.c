@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/07 14:03:54 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/27 15:19:28 by agimi            ###   ########.fr       */
+/*   Updated: 2023/01/18 16:33:26 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,12 @@ int	ft_strcmp1(const char *s1, const char *s2)
 	while (s1[a] == '0')
 		a++;
 	if (s1[a] == '\0' && s2[a] == '\0')
-		return (0);
+		return (free((void *)s2), 0);
 	while ((s1[a] != '\0' || s2[b] != '\0'))
 	{
 		if (s1[a] != s2[b])
-			return ((unsigned char)s1[a] - (unsigned char)s2[b]);
+			return (free((void *)s2), \
+			(unsigned char)s1[a] - (unsigned char)s2[b]);
 		a++;
 		b++;
 	}
