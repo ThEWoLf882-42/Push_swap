@@ -6,7 +6,7 @@
 /*   By: agimi <agimi@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 14:45:26 by agimi             #+#    #+#             */
-/*   Updated: 2022/12/29 13:11:45 by agimi            ###   ########.fr       */
+/*   Updated: 2023/02/02 16:30:48 by agimi            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,11 @@ char	*check_com(t_stacks **a, t_stacks **b, char *com)
 	else if (com[0] == 's' && com[1] == 's' && com[2] == '\n')
 		ss(a, b, 0);
 	else
+	{
+		free_them_all(b);
+		free(com);
 		the_error(a);
+	}
 	return (get_next_line(0));
 }
 
